@@ -3,11 +3,12 @@ package repos;
 import java.util.Collection;
 import java.util.Optional;
 
-public interface Repository <T, k>{
+public interface Repository <T, K>{
     void save(T item);
-    Optional<T> findById(k id);
+    void printKey(T item);
+    Optional<T> findById(K id);
     Collection<T> findAll();
-    void deleteById(k id);
+    void deleteById(K id);
     int size();
 
 }
